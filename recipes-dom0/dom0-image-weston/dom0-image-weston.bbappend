@@ -12,7 +12,11 @@ XT_QUIRK_BB_ADD_LAYER += "meta-xt-prod-extra"
 # Renesas R-Car
 ################################################################################
 SRC_URI_rcar = "repo://github.com/xen-troops/manifests;protocol=https;branch=gen3-test-v1;scmdata=keep"
-XT_QUIRK_PATCH_SRC_URI_rcar = "file://${S}/meta-renesas/meta-rcar-gen3/docs/sample/patch/patch-for-linaro-gcc/0001-rcar-gen3-add-readme-for-building-with-Linaro-Gcc.patch;patchdir=meta-renesas"
+XT_QUIRK_PATCH_SRC_URI_rcar = " \
+    file://${S}/meta-renesas/meta-rcar-gen3/docs/sample/patch/patch-for-linaro-gcc/0001-rcar-gen3-add-readme-for-building-with-Linaro-Gcc.patch;patchdir=meta-renesas \
+    http://github.com/xen-troops/meta-xt-prod-gen3-test/pull/4.patch;patchdir=meta-xt-prod-extra;striplevel=5;md5sum=966ef3fbc4473b36089161e536adddee \
+"
+
 XT_BB_LAYERS_FILE_rcar = "meta-rcar-gen3/doc/bblayers.conf"
 XT_BB_LOCAL_CONF_FILE_rcar = "meta-rcar-gen3/doc/local-wayland.conf"
 

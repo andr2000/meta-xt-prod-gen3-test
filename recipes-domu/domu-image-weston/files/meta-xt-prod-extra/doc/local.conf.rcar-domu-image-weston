@@ -290,3 +290,4 @@ RDEPENDS_gstreamer1.0-plugins-bad = "libwayland-egl"
 
 DISTRO_FEATURES_remove = " x11 gtk bluez5 gobject-introspection-data wifi nfc bluetooth irda zeroconf 3g"
 
+include ${@d.getVar('XT_SHARED_ROOTFS_DIR', True) or ''}/local.conf.domd_machine.inc

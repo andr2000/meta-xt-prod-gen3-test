@@ -57,6 +57,14 @@
 
 /delete-node/&adsp;
 
+&a57_0 {
+	/delete-property/cpu-supply;
+};
+
+/delete-node/&avs_sensor;
+
+/delete-node/&i2c_dvfs;
+
 &dmac0 {
 	/delete-property/iommus;
 };

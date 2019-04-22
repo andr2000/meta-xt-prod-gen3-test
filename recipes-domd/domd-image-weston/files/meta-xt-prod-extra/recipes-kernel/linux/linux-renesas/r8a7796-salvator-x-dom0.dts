@@ -57,6 +57,7 @@
 
 &a57_0 {
 	clocks = <&scpi_dvfs 0>;
+	/delete-property/cpu-supply;
 };
 
 &a57_1 {
@@ -78,6 +79,10 @@
 &a53_3 {
 	/delete-property/clocks;
 };
+
+/delete-node/&avs_sensor;
+
+/delete-node/&i2c_dvfs;
 
 /* ============================ Enabled IPMMUs ===============================*/
 &ipmmu_mm {
@@ -299,6 +304,5 @@
 &fcpvd2			{ xen,passthrough; };
 &fcpcs			{ xen,passthrough; };
 &tsc			{ xen,passthrough; };
-&i2c_dvfs		{ xen,passthrough; };
 &pmic			{ xen,passthrough; };
 

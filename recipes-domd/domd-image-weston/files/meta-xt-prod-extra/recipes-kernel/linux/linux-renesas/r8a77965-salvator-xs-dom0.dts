@@ -309,6 +309,5 @@
 &fcpvd1			{ xen,passthrough; };
 &fcpcs			{ xen,passthrough; };
 &tsc			{ xen,passthrough; };
-&i2c_dvfs		{ xen,passthrough; };
 &pmic			{ xen,passthrough; };
 

@@ -65,6 +65,8 @@
 
 /delete-node/&i2c_dvfs;
 
+/delete-node/&tsc;
+
 &dmac0 {
 	/delete-property/iommus;
 };
